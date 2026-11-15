@@ -1,0 +1,25 @@
+# ---- build output ----
+dist/
+bin/
+obj/
+*.user
+*.suo
+
+# ---- IDE ----
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+
+# ---- OS ----
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- game files that must never be committed ----
+*.exe
+*.dll
+*.pdb
+*.log
+BepInEx/
+CasualtiesUnknown_Data/

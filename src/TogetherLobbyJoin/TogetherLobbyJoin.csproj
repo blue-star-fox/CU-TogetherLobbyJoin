@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>TogetherLobbyJoin</AssemblyName>
+    <RootNamespace>TogetherLobbyJoin</RootNamespace>
+    <AssemblyTitle>Together - Join By Room ID (Bilibili UID:1951065665)</AssemblyTitle>
+    <Version>1.8.1</Version>
+    <FileVersion>1.8.1.0</FileVersion>
+    <AssemblyVersion>1.8.1.0</AssemblyVersion>
+    <Product>Together - Join By Room ID</Product>
+    <ProductVersion>1.8.1</ProductVersion>
+    <Company>Bilibili UID 1951065665</Company>
+    <Copyright>Copyright © 2026 Bilibili UID:1951065665. All rights reserved.</Copyright>
+    <Description>按房间ID加入 Together (CasualtiesMP) 多人联机房间 / Join a Together multiplayer lobby by room ID. Author: Bilibili UID:1951065665</Description>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <GenerateRuntimeConfigurationFiles>false</GenerateRuntimeConfigurationFiles>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\dist\</OutputPath>
+    <NoWarn>$(NoWarn);CS1701;CS1702;CS8981</NoWarn>
+    <Deterministic>true</Deterministic>
+
+    <!-- 游戏安装目录：构建时用 -p:GameDir="..." 传入（build.ps1 会自动找），这里给个常见默认值 -->
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown</GameDir>
+    <ManagedDir>$(GameDir)\CasualtiesUnknown_Data\Managed</ManagedDir>
+    <CoreDir>$(GameDir)\BepInEx\core</CoreDir>
+    <ModDir>$(GameDir)\BepInEx\plugins\Together</ModDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(CoreDir)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(CoreDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CasualtiesMP">
+      <HintPath>$(ModDir)\CasualtiesMP.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>$(ManagedDir)\com.rlabrecque.steamworks.net.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(ManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(ManagedDir)\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
+
+
+
+
+
+
+
+
